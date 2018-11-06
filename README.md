@@ -31,5 +31,4 @@ This module uses Yarn.
 }
 ```
 ## Development
-This module isn't perfect. If you find a bug, has a feature request or whatever don't hesitate to create an issue.
-OR even better, create a pull request! :D
+This module isn't perfect. If you find a bug or has a feature request don't hesitate to create an issue OR even better, create a pull request! :D
