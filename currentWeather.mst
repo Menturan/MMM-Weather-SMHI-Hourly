@@ -1,0 +1,6 @@
+<div class="large light">
+    <span class="normal medium">
+    </span>
+    <span class="{{iconFunction}}"></span>
+    <span class="bright"> {{temp}}<i class="wi wi-degrees"/</span>
+</div>

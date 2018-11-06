@@ -1,0 +1,14 @@
+<table class="small">
+    {{#future}}
+        <tr>
+            <td>{{time}}</td>
+            <td><i class="{{iconFunction}}" style="font-size: 22px;"></i></td>
+            <td class="align-right bright max-temp">
+                {{temp}}<i class="wi wi-degrees"/>
+            </td>
+            <td class="align-right min-temp" style="word-spacing: -2px;">
+                <i class="wi wi-raindrops"style="margin-right: 3px;"></i>{{rain}} mm
+            </td>
+        </tr>
+    {{/future}}
+</table>
