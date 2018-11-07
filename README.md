@@ -1,4 +1,6 @@
 # MMM-Weather-SMHI-Hourly
+Magic Mirror module that displays weather from SMHI hourly. Weather icons changes upon sunrise and sunset.
+Relys on [SMHI Api](https://opendata.smhi.se/apidocs/metfcst/index.html) and [Sunrise Sunset Api](https://sunrise-sunset.org/api)
 
 ## Screenshot
 ![Screenshot](screenshot.png)
