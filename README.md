@@ -24,10 +24,10 @@ This module uses Yarn.
 ``` json
 {
     module: "MMM-Weather-SMHI-Hourly",
-    position: 'top_right',
+    position: "top_right",
     config: {
-        lon: 'xx.xxxxxx',
-        lat: 'yy.yyyyyy',
+        lon: "xx.xxxxxx",
+        lat: "yy.yyyyyy",
         hours: 12
     }
 }
