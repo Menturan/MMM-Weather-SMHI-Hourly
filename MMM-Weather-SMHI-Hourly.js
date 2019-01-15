@@ -7,7 +7,7 @@
 Module.register("MMM-Weather-SMHI-Hourly", {
 	// Module defaults
 	defaults: {
-		updateInterval: 60 * 60 * 1000, // 60min 
+		updateInterval: 60 * 60 * 1000, // 60min
 		lon: 0,
 		lat: 0,
 		hours: 12,
@@ -17,11 +17,11 @@ Module.register("MMM-Weather-SMHI-Hourly", {
 
 	// Required scripts
 	getScripts: function () {
-		return ['moment.js', this.file('node_modules/mustache/mustache.min.js')];
+		return ["moment.js", this.file("node_modules/mustache/mustache.min.js")];
 	},
 
 	getStyles: function () {
-		return [this.file('css/icons/weather-icons.min.css')];
+		return [this.file("css/icons/weather-icons.min.css")];
 	},
 
 	// Start the module
@@ -31,17 +31,17 @@ Module.register("MMM-Weather-SMHI-Hourly", {
 		this.config.language = config.language;
 		moment.locale(config.language);
 		this.loaded = false;
-		this.sendSocketNotification('UPDATE_WEATHER', this.config); // Send config to helper and initiate an update
+		this.sendSocketNotification("UPDATE_WEATHER", this.config); // Send config to helper and initiate an update
 	},
 
 	prepearHtmlTemplates: function () {
 		var self = this;
-		var currentWeatherHtmlTemplatePromise = fetch(this.file('currentWeather.mst'))
+		var currentWeatherHtmlTemplatePromise = fetch(this.file("currentWeather.mst"))
 			.then(function (response) {
 				return response.text();
 			});
 
-		var futureWeatherHtmlTemplatePromise = fetch(this.file('futureWeather.mst'))
+		var futureWeatherHtmlTemplatePromise = fetch(this.file("futureWeather.mst"))
 			.then(function (response) {
 				return response.text();
 			});
@@ -108,7 +108,7 @@ Module.register("MMM-Weather-SMHI-Hourly", {
 		container.appendChild(currentWeatherHtml);
 
 		var headerWeatherHtml = document.createElement("div");
-		headerWeatherHtml.innerHTML = '<header></header>';
+		headerWeatherHtml.innerHTML = "<header></header>";
 		container.appendChild(headerWeatherHtml);
 
 		var futureWeatherHtml = document.createElement("div");
@@ -133,14 +133,14 @@ Module.register("MMM-Weather-SMHI-Hourly", {
 		}
 		if (notification == "SERVICE_FAILURE") {
 			this.failure = payload;
-			Log.log("Service failure: " + this.failure.StatusCode + ':' + this.failure.Message);
+			Log.log("Service failure: " + this.failure.StatusCode + ":" + this.failure.Message);
 			this.updateDom();
 		}
 	},
 
 	debugLog: function (msg) {
 		if (this.config.debug) {
-			Log.log('[' + (new Date(Date.now())).toLocaleTimeString() + '] - DEBUG - ' + this.name + ' - ' + new Error().lineNumber + ' - : ' + msg);
+			Log.log("[" + (new Date(Date.now())).toLocaleTimeString() + "] - DEBUG - " + this.name + " - " + new Error().lineNumber + " - : " + msg);
 		}
 	}
 });
