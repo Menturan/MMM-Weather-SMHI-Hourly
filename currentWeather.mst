@@ -1,4 +1,4 @@
-<div class="large light">
+<div class="large light" style="border-bottom: 1px solid #666; margin-bottom: 10px;">
     <span class="normal medium">
     </span>
     <span class="{{iconFunction}}"></span>

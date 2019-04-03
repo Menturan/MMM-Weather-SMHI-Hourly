@@ -34,6 +34,10 @@ Module.register("MMM-Weather-SMHI-Hourly", {
 		this.sendSocketNotification("UPDATE_WEATHER", this.config); // Send config to helper and initiate an update
 	},
 
+	getHeader: function () {
+		return this.data.header;
+	},
+
 	prepearHtmlTemplates: function () {
 		var self = this;
 		var currentWeatherHtmlTemplatePromise = fetch(this.file("currentWeather.mst"))
@@ -106,10 +110,6 @@ Module.register("MMM-Weather-SMHI-Hourly", {
 		var currentWeatherHtml = document.createElement("div");
 		currentWeatherHtml.innerHTML = Mustache.render(this.currentWeatherHtmlTemplate, this.currentWeather.current);
 		container.appendChild(currentWeatherHtml);
-
-		var headerWeatherHtml = document.createElement("div");
-		headerWeatherHtml.innerHTML = "<header></header>";
-		container.appendChild(headerWeatherHtml);
 
 		var futureWeatherHtml = document.createElement("div");
 		futureWeatherHtml.innerHTML = Mustache.render(this.futureWeatherHtmlTemplate, this.currentWeather);
