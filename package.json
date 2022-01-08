@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "moment": "^2.24.0",
-    "moment-timezone": "^0.5.26",
-    "mustache": "^3.0.1",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4"
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.34",
+    "mustache": "^4.2.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
   }
 }
