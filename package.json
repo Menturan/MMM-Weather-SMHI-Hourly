@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.34",
     "mustache": "^4.2.0",
     "request": "^2.88.2",
